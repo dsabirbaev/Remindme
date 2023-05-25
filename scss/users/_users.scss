@@ -1,0 +1,86 @@
+
+#users{
+    min-height: 750px;
+    padding-top: 150px;
+    //border: 1px solid red;
+    position: relative;
+}
+
+.users__img{
+    position: absolute;
+}
+.users__cards{
+    margin-top: 60px;
+    display: flex;
+}
+
+.users__card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    &--title{
+        @include font-style(36px, $ff-PoppinsSemiBold, $color-black);
+    }
+    &--info{
+        display: flex;
+        column-gap: 31px;
+        margin-bottom: 49px;
+        h1{
+            @include font-style(18px, $ff-PoppinsSemiBold, $color-black);
+            line-height: 27px;
+        }
+        div{
+            @include font-style(14px, $ff-PoppinsRegular, $color-black);
+            line-height: 21px;
+        }
+    }
+    &--text{
+        @include font-style(18px, $ff-PoppinsRegular, $color-black);
+        line-height: 36px;
+        max-width: 493px;
+    } 
+
+}
+
+
+// settings for slides
+
+.users__cards .slick-slide {
+    //margin: 0 0px;
+    right: 0;
+    display: flex;
+    padding-left: 11%;
+}
+
+.users__cards .slick-track {
+    //margin: 0px 0;
+    position: relative;
+}
+
+/* arrows */
+.users__cards  .slick-arrow{
+	position: absolute;
+	top: 110%;
+	//margin: -30px 0px 0px 0px;
+	z-index: 10;
+	font-size: 0;
+	width: 42px;
+	height: 42px;
+}
+.users__cards  .slick-arrow.slick-prev{
+	left: 55%;
+	background-image: url('../icons/left.svg');
+	background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+.users__cards .slick-arrow.slick-next{
+	right: 35%;
+    background-image: url('../icons/right.svg');
+	background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    cursor: pointer;
+}

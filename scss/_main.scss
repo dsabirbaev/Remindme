@@ -1,0 +1,36 @@
+@import 'variables',
+'mixins',
+'fonts';
+
+
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    //border: 1px solid red;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: aqua;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #f2eeee;
+    border-radius: 10px;
+    height: 20px;
+}
+
+
+@import './header/header';
+@import './intro/intro';
+@import './features/features';
+@import './advantage/advantage';
+@import './download/download';
+@import './users/users';
+@import './footer/footer';

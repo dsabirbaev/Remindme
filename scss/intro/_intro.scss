@@ -1,0 +1,80 @@
+
+main{
+    width: 100%;
+    
+}
+
+#intro{
+  
+    min-height: 877px;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left{
+    max-width: 533px;
+   // border: 1px solid red;
+}
+.left .title{
+    @include font-style(64px, $ff-PoppinsSemiBold, $color-black);
+    line-height: 85px;
+}
+
+.left .text{
+    @include font-style(18px, $ff-PoppinsRegular, $color-black);
+    line-height: 36px;
+}
+
+.left .btn{
+    @include font-style(18px, $ff-PoppinsMedium, $color-white);
+    background-color: $color-blue;
+    width: 250px;
+    height: 75px;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.right{
+    background-color: $color-bg;
+    height: 877px;
+    border-radius: 0px 0px 0px 100px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    &::after{
+        content: "";
+        width: 290px;
+        height: 220px;
+        background-image: url(../icons/ellipse.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+    }
+    &::before{
+        content: "";
+        width: 290px;
+        height: 220px;
+        background-image: url(../icons/ellipse.svg);
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: rotate(-180deg);
+    }
+}
+
+.phone{
+    position: relative;
+    z-index: 2;
+    filter: brightness(0.95);
+    transition: all 0.5s ease;
+    &:hover{
+        filter: brightness(1.02);
+    }
+}
